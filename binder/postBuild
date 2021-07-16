@@ -14,7 +14,8 @@ c.ServerProxy.servers = {
         'launcher_entry': {
             'enabled': True,
             'title': 'IDAES Flowsheet Visualizer',
-        }
+        },
+        'new_browser_tab': False,
     }
 }
 EOF
