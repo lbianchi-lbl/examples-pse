@@ -1,0 +1,2 @@
+idaes-pse
+jupyterlab_iframe>=0.2

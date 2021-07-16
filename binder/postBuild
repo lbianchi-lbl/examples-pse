@@ -1,0 +1,9 @@
+#!/bin/bash
+
+jupyter labextension install jupyterlab_iframe@^0.2
+jupyter serverextension enable --py jupyterlab_iframe
+
+idaes get-extensions
+
+mkdir -p ~/.jupyter
+echo -e "c.JupyterLabIFrame.iframes = ['http://localhost:14345/app']" >> ~/.jupyter/jupyter_notebook_config.py
