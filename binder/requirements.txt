@@ -1,3 +1,3 @@
-idaes-pse @ https://github.com/lbianchi/idaes-pse/archive/binder.zip
+idaes-pse @ https://github.com/lbianchi-lbl/idaes-pse/archive/binder.zip
 jupyterlab_iframe>=0.2
 jupyter-server-proxy==3
