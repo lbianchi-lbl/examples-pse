@@ -6,4 +6,15 @@ jupyter serverextension enable --py jupyterlab_iframe
 idaes get-extensions
 
 mkdir -p ~/.jupyter
-echo -e "c.JupyterLabIFrame.iframes = ['http://localhost:14345/app']" >> ~/.jupyter/jupyter_notebook_config.py
+cat <<EOF >> ~/.jupyter/jupyter_notebook_config.py
+c.JupyterLabIFrame.iframes = ['http://localhost:14435/app']
+c.ServerProxy.servers = {
+    'idaes_ui_fsvis': {
+        'command': ['python', '-m', 'idaes.ui.fsvis', '{port}'],
+        'launcher_entry': {
+            'enabled': True,
+            'title': 'IDAES Flowsheet Visualizer',
+        }
+    }
+}
+EOF
